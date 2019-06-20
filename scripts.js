@@ -1,12 +1,16 @@
 function getExcuse()
 {
-    alert('it was pressed');
-   let person = ['The dog', 'My Car', 'An accident', 'Her cat'];
-   let action = ['The dog', 'My Car', 'An accident', 'Her cat'];
-   let timeToPass = ['The dog', 'My Car', 'An accident', 'Her cat'];
+   let person = ['The dog', 'My car', 'The door', 'Her cat'];
+   let action = ['hid my shoes ', 'was caught in a triple accident', 'got looked', 'eat my dinner'];
+   let timeToPass = ['exactly 20 mins before leaving', 'after I left Juan house', 'in the middle of the moving', 'while you were talking to me!'];
+
+   var nbrToGet = parseInt(getNumberToExcuse());
+
+   var excuse = person[nbrToGet] + " " + action[nbrToGet] + " " + timeToPass[nbrToGet];
+   document.getElementById("excuse").innerHTML = excuse;
 }
 
 function getNumberToExcuse()
 {
-    return Math.floor(Math.random * 4);
+    return Math.floor(Math.random() * 4);
 }
